@@ -3,5 +3,11 @@
 
 <h1><%= title %></h1>
 
+<% playlists.forEach(playlist => { %>
+  <form>
+    <h3><%= playlist.name %></h3><br>
+    <p><%= playlist.description %></p><br>
+  </form>
+<% }) %>
 
 <%- include('../partials/footer') %>
