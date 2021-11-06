@@ -26,7 +26,6 @@ function newPlaylist(req, res) {
 }
 
 function create(req, res) {
-  console.log("hello")
   Playlist.create(req.body)
   .then(playlist => {
     res.redirect(`/profiles/${req.user.profile._id}`)
