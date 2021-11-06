@@ -14,14 +14,7 @@ function index(req, res) {
   })
 }
 
-function newPlaylist(req, res){
-  res.render('playlists/new', {
-    title: "Create Playlist"
-  })
-}
-
 
 export {
 index,
-newPlaylist as new,
 }
