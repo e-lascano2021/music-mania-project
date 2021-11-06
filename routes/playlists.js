@@ -4,6 +4,7 @@ import * as playlistsCtrl from '../controllers/playlists.js'
 
 const router = Router()
 
+//localhost:3000/playlists
 router.get('/', isLoggedIn, playlistsCtrl.index)
 
 export {

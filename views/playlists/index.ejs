@@ -1,7 +1,18 @@
 <%- include('../partials/html-head') %>
 <%- include('../partials/nav') %>
 
-<h1>Browse Playlist</h1>
-<!-- change to title^ -->
+<h1><%= title %></h1>
+
+
+<% playlists.forEach(playlist => { %>
+<section>
+
+  <h2>All the playlists!</h2>
+	<ul>
+      <li><%= playlist.name %></li>
+    </ul>
+  </section>
+  <% }) %>
+
 
 <%- include('../partials/footer') %>

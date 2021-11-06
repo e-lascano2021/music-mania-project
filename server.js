@@ -18,7 +18,7 @@ import('./config/passport.js')
 // require routes
 import { router as indexRouter } from './routes/index.js'
 import { router as authRouter } from './routes/auth.js'
-// import { router as profilesRouter } from './routes/profiles.js'
+import { router as profilesRouter } from './routes/profiles.js'
 import { router as playlistsRouter } from './routes/playlists.js'
 // import { router as songsRouter } from '/routes/songs.js
 
@@ -65,7 +65,7 @@ app.use(passUserToView)
 // router middleware
 app.use('/', indexRouter)
 app.use('/auth', authRouter)
-// app.use('/profiles', profilesRouter)
+app.use('/profiles', profilesRouter)
 app.use('/playlists', playlistsRouter)
 // app.use('/songs', songsRouter)
 
