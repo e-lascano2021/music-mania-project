@@ -16,6 +16,7 @@ router.get(
   })
 )
 
+
 router.get('/logout', function (req, res) {
   req.logout()
   res.redirect('/')
