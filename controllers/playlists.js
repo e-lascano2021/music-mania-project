@@ -15,14 +15,30 @@ function index(req, res) {
 }
 
 
-function newPlaylist(req, res){
+function newPlaylist(req, res) {
   res.render('playlists/new', {
-    title: "Create Playlist"
+    title: "Create Playlist",
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect("/playlists")
   })
 }
 
+function create(req, res) {
+  console.log("hello")
+  Playlist.create(req.body)
+  .then(playlist => {
+    res.redirect(`/profiles/${req.user.profile._id}`)
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect("/playlists")
+  })
+}
 
 export {
 index,
 newPlaylist as new,
+create,
 }
