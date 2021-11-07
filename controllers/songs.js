@@ -24,8 +24,12 @@ function newSong (req, res) {
   })
 }
 
+function createSong(req, res) {
+  console.log("making song lalalala")
+}
 
 export {
   index,
   newSong as new,
+  createSong as create,
 }

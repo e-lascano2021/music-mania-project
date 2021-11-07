@@ -10,6 +10,8 @@ router.get('/', isLoggedIn, songsCtrl.index)
 //localhost:3000/songs/new
 router.get('/new', isLoggedIn, songsCtrl.new)
 
+//localhost:3000/songs/new 
+router.post('/new', isLoggedIn, songsCtrl.create)
 
 
 export {

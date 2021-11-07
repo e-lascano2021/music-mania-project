@@ -7,7 +7,7 @@ const songSchema = new Schema({
   artist: String,
   genre: {
     type: String,
-    enum: ["Pop", "Punk", "Country", "Latin", "Indie", "Rock", "Metal", "Classical", "Hip Hop", "Jazz", "90's", "Romance", "Heartbreak", "Uplifting"]
+    enum: ["Pop", "Punk", "Country", "Latin", "Indie", "Rock", "Metal", "Classical", "Hip Hop", "Jazz", "90's", "Romance", "Heartbreak", "Uplifting"],
   },
   chorus: String
 })
