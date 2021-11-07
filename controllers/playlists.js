@@ -48,9 +48,13 @@ function create(req, res) {
   })
 }
 
+function show(req, res) {
+  console.log("i am showing things")
+}
 
 export {
 index,
 newPlaylist as new,
 create,
+show,
 }

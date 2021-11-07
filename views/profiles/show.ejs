@@ -20,11 +20,17 @@
   </form>
 <% } %>
 
-  <section>
     <% playlists.forEach (p => { %>
-        <p><%= p.name %></p>
-    <% }) %>
-  </section>
+      <form>
+        <h3><%= p.name %></h3>
+        <h3><%= p.description %></h3>
+        <h3>
+          <a href="/playlists/<%= p._id %>">
+            Details
+          </a>
+        </h3>
+      </form>
+    <% }) %>  
 
 </main> 
 

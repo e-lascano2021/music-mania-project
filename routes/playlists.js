@@ -10,6 +10,9 @@ router.get('/', isLoggedIn, playlistsCtrl.index)
 //localhost:3000/playlists/new
 router.get('/new', isLoggedIn, playlistsCtrl.new)
 
+//localhost:3000/playlists/:id
+router.get('/:id', isLoggedIn, playlistsCtrl.show)
+
 //localhost:3000/playlists/new
 router.post('/new', isLoggedIn, playlistsCtrl.create)
 
