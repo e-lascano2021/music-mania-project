@@ -4,10 +4,10 @@ const Schema = mongoose.Schema
 const profileSchema = new Schema({
   name: String,
   avatar: String,
-  playlists: {
+  playlists: [{
     type: Schema.Types.ObjectId, 
     ref: "Playlist"
-  }
+  }],
 }, {
   timestamps: true
 })

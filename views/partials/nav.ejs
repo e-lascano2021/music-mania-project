@@ -6,10 +6,6 @@
   <nav>
     <h1>Music Mania</h1>
     <% if (user) { %>
-      <a href="/auth/logout">
-        <button type="submit">Logout</button>
-      </a>
-      
       <a
       href="/profiles" <%- title === 'Music Maniacs' ? 'class="active"' : '' %>
       >Music Maniacs</a>
@@ -29,5 +25,10 @@
       <a
       href="/playlists" <%- title === 'Browse Playlists' ? 'class="active"' : '' %>
       >Browse Playlists</a>
+      
+      <a href="/auth/logout">
+        <button type="submit">Logout</button>
+      </a>
       <% } %>
     </nav>
+    

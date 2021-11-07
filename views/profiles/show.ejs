@@ -13,11 +13,22 @@
     </div>
   <% } %>
   <h1><%= isSelf ? title : `${profile.name}'s Playlists!` %></h1>
+
+<% if (isSelf) { %>
   <form action="/playlists/new">
-    <%- isSelf ? `<button type="submit">Add Playlist</buttton>` : '' %>
+    <button type="submit">Add Playlist </button>
   </form>
+<% } %>
+
+  <section>
+    <% playlists.forEach (p => { %>
+        <p><%= p.name %></p>
+    <% }) %>
+  </section>
+
 </main> 
 
-    
+
+
 
 <%- include('../partials/footer') %>

@@ -2,12 +2,14 @@
 <%- include('../partials/nav') %>
 
 <h1><%= title %></h1>
+<p><%= owner %></p>
 <form action="/playlists/new" method="POST">
   <label >Name:</label>
   <input name="name" type="text"><br>
   <label >Description:</label><br>
   <textarea name="description" type="text"> </textarea><br>
   <button type="submit">Create Playlist</button>
+  <input hidden name="owner" value="<%= owner %>">
 </form>
 
 <%- include('../partials/footer') %>

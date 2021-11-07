@@ -1,4 +1,5 @@
 import { Playlist } from '../models/playlist.js'
+import { Profile } from '../models/profile.js'
 
 function index(req, res) {
   Playlist.find({})
@@ -18,6 +19,8 @@ function index(req, res) {
 function newPlaylist(req, res) {
   res.render('playlists/new', {
     title: "Create Playlist",
+    owner: req.user.profile._id
+    // owner id
   })
   .catch(err => {
     console.log(err)
@@ -27,9 +30,18 @@ function newPlaylist(req, res) {
 
 function create(req, res) {
   Playlist.create(req.body)
+  //creating playlist 
   .then(playlist => {
-    res.redirect(`/profiles/${req.user.profile._id}`)
-  })
+    //each playlist update the owner
+    console.log("ndfn", playlist)
+    Profile.updateOne({_id: playlist.owner}, {$push: {playlists: playlist}})
+    //creating specfic playlist that owner created and its updating the playlists ownerid 
+    // 
+    .then( result => {
+      res.redirect(`/profiles/${req.user.profile._id}`)
+      })
+
+    })
   .catch(err => {
     console.log(err)
     res.redirect("/playlists")
