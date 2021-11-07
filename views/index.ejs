@@ -12,6 +12,13 @@
     <h2>Where Do I Start?</h2>
     <h3>Well first things first: Sign in with a Google Account!</h3>
   </form>
+  <% if (!user) {%>
+    <a href="/auth/google" class="siwg-link">
+      <button type="submit" class="siwg">
+        <img id="siwg-image" alt="Sign in with Google" />
+      </button>
+    </a>
+  <% } %>
 </main>
 
 <%- include('./partials/footer') %>
