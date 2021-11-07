@@ -7,6 +7,9 @@ const router = Router()
 //localhost:3000/songs/
 router.get('/', isLoggedIn, songsCtrl.index)
 
+//localhost:3000/songs/new
+router.get('/new', isLoggedIn, songsCtrl.new)
+
 
 
 export {
