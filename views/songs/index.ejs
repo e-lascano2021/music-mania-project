@@ -2,6 +2,15 @@
 <%- include('../partials/nav') %>
 
 <h1><%= title %></h1>
-<!-- switch to title^ -->
+
+<% songs.forEach(song => { %>
+  <form>
+    <h3><%= song.name %></h3><br>
+    <h3><%= song.artist %></h3><br>
+    <h3><%= song.genre %></h3><br>
+    <h3>Chorus</h3><br>
+    <p><%= song.chorus%></p>
+  </form>
+<% }) %>
 
 <%- include('../partials/footer') %>

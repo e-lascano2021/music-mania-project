@@ -24,12 +24,19 @@ function newSong (req, res) {
   })
 }
 
-function createSong(req, res) {
-  console.log("making song lalalala")
+function create(req, res) {
+  Song.create(req.body)
+  .then(song => {
+    res.redirect("/songs")
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect("/songs")
+  })
 }
 
 export {
   index,
   newSong as new,
-  createSong as create,
+  create,
 }
