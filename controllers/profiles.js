@@ -39,8 +39,13 @@ function show(req, res) {
   })
 }
 
+function deletePlaylist(req, res){
+  console.log("deleteingggg")
+}
+
 
 export {
   index,
   show,
+  deletePlaylist as delete,
 }

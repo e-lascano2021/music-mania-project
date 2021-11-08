@@ -1,6 +1,7 @@
 import { Playlist } from '../models/playlist.js'
 import { Profile } from '../models/profile.js'
 
+
 function index(req, res) {
   Playlist.find({})
   .then(playlists => {
@@ -49,9 +50,9 @@ function create(req, res) {
 function show(req, res) {
   Playlist.findById(req.params.id)
   .then(playlist => {
-    res.render('playlists/show', {
-      playlist,
-      title: `${playlist.name}`
+      res.render('playlists/show', {
+        playlist,
+        title: `${playlist.name}`,
     })
   })
   .catch(err => {

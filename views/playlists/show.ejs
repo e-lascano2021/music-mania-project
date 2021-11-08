@@ -1,10 +1,19 @@
 <%- include('../partials/html-head') %>
 <%- include('../partials/nav') %>
 
-<h1>Name of playlist</h1>
+<h1><%= title %></h1>
+<% if (playlist.owner.equals(user?.profile._id)) { %>
+  <h4>Want more Songs on your Playlist? Go to Browse Music!</h4>
+<% } %>
 
-<% if ( playlist.owner.equals(user?.profile._id)) { %>
-<h3>im here</h3>
+
+
+<form>
+  <%  %>
+</form>
+
+<% if (playlist.owner.equals(user?.profile._id)) { %>
+  <h3>im here</h3>
 <% } %>
 
 <%- include('../partials/footer') %>
