@@ -79,10 +79,15 @@ function deletePlaylist(req, res) {
   })
 }
 
+function edit(req, res) {
+  console.log("editinggg")
+}
+
 export {
 index,
 newPlaylist as new,
 create,
 show,
 deletePlaylist as delete,
+edit,
 }

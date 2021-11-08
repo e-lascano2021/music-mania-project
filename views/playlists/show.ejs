@@ -14,8 +14,13 @@
 
 <% if (playlist.owner.equals(user?.profile._id)) { %>
     <form action="/playlists/<%= playlist._id %>?_method=DELETE" method="POST">
-      <button>
-        Delete
+      <button type="submit">
+        Delete Playlist
+      </button>
+    </form>
+    <form action="/playlists/<%= playlist._id %>/edit">
+      <button type="submit">
+        Edit Playlist
       </button>
     </form>
 <% } %>
