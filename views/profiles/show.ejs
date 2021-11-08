@@ -32,13 +32,6 @@
 
         
       </form>
-      <% if(isSelf) { %>
-        <form action="/profiles/<%= profile._id %>?_method=DELETE" method="POST">
-          <button>
-            Delete
-          </button>
-        </form>
-      <% } %>
     <% }) %>  
 
 </main> 

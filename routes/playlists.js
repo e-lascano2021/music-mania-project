@@ -16,6 +16,9 @@ router.get('/:id', isLoggedIn, playlistsCtrl.show)
 //localhost:3000/playlists/new
 router.post('/new', isLoggedIn, playlistsCtrl.create)
 
+//localhost:3000/playlists/:id
+router.delete('/:id', isLoggedIn, playlistsCtrl.delete)
+
 
 export {
   router

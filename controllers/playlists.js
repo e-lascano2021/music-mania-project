@@ -61,9 +61,28 @@ function show(req, res) {
   })
 }
 
+function deletePlaylist(req, res) {
+  Playlist.findById(req.params.id)
+  .then(playlist => {
+    if (playlist.owner.equals(req.user.profile._id)) {
+      playlist.delete()
+      .then(() => {
+        res.redirect(`/profiles/${ req.user.profile._id }`)
+      })
+    } else {
+      throw new Error ("🚫 Not Authorized! 🚫")
+    }
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect("/playlists")
+  })
+}
+
 export {
 index,
 newPlaylist as new,
 create,
 show,
+deletePlaylist as delete,
 }
