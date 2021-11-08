@@ -20,7 +20,6 @@ function newPlaylist(req, res) {
   res.render('playlists/new', {
     title: "Create Playlist",
     owner: req.user.profile._id
-    // owner id
   })
   .catch(err => {
     console.log(err)
@@ -33,7 +32,6 @@ function create(req, res) {
   //creating playlist 
   .then(playlist => {
     //each playlist update the owner
-    console.log("ndfn", playlist)
     Profile.updateOne({_id: playlist.owner}, {$push: {playlists: playlist}})
     //creating specfic playlist that owner created and its updating the playlists ownerid 
     // 
@@ -49,7 +47,17 @@ function create(req, res) {
 }
 
 function show(req, res) {
-  console.log("i am showing things")
+  Playlist.findById(req.params.id)
+  .then(playlist => {
+    res.render('playlists/show', {
+      playlist,
+      title: `${playlist.name}`
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect("/playlists")
+  })
 }
 
 export {

@@ -2,5 +2,9 @@
 <%- include('../partials/nav') %>
 
 <h1>Name of playlist</h1>
-<h1><%= playlist.name %></h1>
+
+<% if ( playlist.owner.equals(user?.profile._id)) { %>
+<h3>im here</h3>
+<% } %>
+
 <%- include('../partials/footer') %>

@@ -20,7 +20,6 @@ function show(req, res) {
   .then(profile => {
     Playlist.find({ owner: profile._id })
     .then(playlists => { 
-      // console.log("profile orking",profile)
       Profile.findById(req.user.profile._id)
       .then(self => {
         const isSelf = self._id.equals(profile._id)
