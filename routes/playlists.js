@@ -20,6 +20,9 @@ router.get('/:id/edit', isLoggedIn, playlistsCtrl.edit)
 router.post('/new', isLoggedIn, playlistsCtrl.create)
 
 //localhost:3000/playlists/:id
+router.put("/:id", isLoggedIn, playlistsCtrl.update)
+
+//localhost:3000/playlists/:id
 router.delete('/:id', isLoggedIn, playlistsCtrl.delete)
 
 

@@ -90,6 +90,10 @@ function edit(req, res) {
   })
 }
 
+function update(req, res) {
+  console.log("i update stuff")
+}
+
 export {
 index,
 newPlaylist as new,
@@ -97,4 +101,5 @@ create,
 show,
 deletePlaylist as delete,
 edit,
+update,
 }
