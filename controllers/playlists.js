@@ -81,6 +81,13 @@ function deletePlaylist(req, res) {
 
 function edit(req, res) {
   console.log("editinggg")
+  Playlist.findById(req.params.id)
+  .then(playlist => {
+    res.render("playlists/edit", {
+      title: "Edit Playlist",
+      playlist
+    })
+  })
 }
 
 export {
