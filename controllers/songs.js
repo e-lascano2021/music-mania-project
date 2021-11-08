@@ -1,3 +1,4 @@
+import { Playlist } from '../models/playlist.js'
 import { Profile } from '../models/profile.js'
 import { Song } from '../models/song.js'
 
@@ -42,8 +43,13 @@ function create(req, res) {
   })
 }
 
+function updateSong(req, res) {
+  console.log("working")
+}
+
 export {
   index,
   newSong as new,
   create,
+  updateSong
 }
