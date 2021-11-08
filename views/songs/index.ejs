@@ -10,6 +10,12 @@
     <h3><%= song.genre %></h3><br>
     <h3>Chorus</h3><br>
     <p><%= song.chorus%></p><br>
+    <select>
+      <% profile.playlists.forEach( p => { %>
+      <option value="<%= p.name %>"><%= p.name %></option>
+      <% }) %>
+    </select>
+    <button>App to Playlist</button>
   </form>
 <% }) %>
 

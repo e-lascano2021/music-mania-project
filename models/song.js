@@ -9,7 +9,7 @@ const songSchema = new Schema({
     type: String,
     enum: ["Pop", "Punk", "Country", "Latin", "Indie", "Rock", "Metal", "Classical", "Hip Hop", "Jazz", "90's", "Romance", "Heartbreak", "Uplifting"],
   },
-  chorus: String
+  chorus: String,
 })
 
 const Song = mongoose.model("Song", songSchema)
