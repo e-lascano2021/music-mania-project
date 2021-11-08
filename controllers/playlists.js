@@ -62,17 +62,21 @@ function show(req, res) {
 }
 
 function deletePlaylist(req, res) {
-  Playlist.findById(req.params.id)
-  .then(playlist => {
-    if (playlist.owner.equals(req.user.profile._id)) {
-      playlist.delete()
-      .then(() => {
-        res.redirect(`/profiles/${ req.user.profile._id }`)
-      })
-    } else {
-      throw new Error ("🚫 Not Authorized! 🚫")
-    }
+  Profile.findById(req.user.profile._id)
+  .then(profile => {
+  profile.playlists.remove({ _id: req.params.id })
+  profile.save()
+  .then(()=> {
+    Playlist.findByIdAndDelete(req.params.id)
+    .then(playlist => {
+      if (playlist.owner.equals(req.user.profile._id)) {
+          res.redirect(`/profiles/${ req.user.profile._id }`)
+      } else {
+        throw new Error ("🚫 Not Authorized! 🚫")
+      }
+    })
   })
+})
   .catch(err => {
     console.log(err)
     res.redirect("/playlists")
