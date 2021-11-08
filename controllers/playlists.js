@@ -88,10 +88,29 @@ function edit(req, res) {
       playlist
     })
   })
+  .catch(err => {
+    console.log(err)
+    res.redirect("/playlists")
+  })
 }
 
 function update(req, res) {
   console.log("i update stuff")
+  Playlist.findById(req.params.id)
+  .then(playlist => {
+    if(playlist.owner.equals(req.user.profile._id)) {
+      playlist.updateOne(req.body, {new: true})
+      .then(() => {
+        res.redirect(`/playlists/${ playlist._id }`)
+      })
+    } else {
+      throw new Error ("🚫 Not Authorized! 🚫")
+    }
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect("/playlists")
+  })
 }
 
 export {
