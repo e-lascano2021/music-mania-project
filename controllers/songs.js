@@ -44,11 +44,9 @@ function create(req, res) {
 }
 
 function addToPlaylist(req, res) {
-  console.log("playlistID#", req.body.playlistId)
-  console.log("playlistId", req.body)
   Song.findById( req.params.id)
   .then( song => {
-    Playlist.updateOne({_id: req.body.playlistId }, {$push: {songs: song}})
+    Playlist.updateOne({_id: req.body.playlistId}, {$push: {songs: song}})
     .then(() => {
       res.redirect(`/playlists/${req.body.playlistId}`)
     })

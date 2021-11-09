@@ -1,5 +1,6 @@
 import { Playlist } from '../models/playlist.js'
 import { Profile } from '../models/profile.js'
+import { Song } from '../models/song.js'
 
 
 function index(req, res) {
@@ -47,18 +48,24 @@ function create(req, res) {
   })
 }
 
-function show(req, res) {
-  Playlist.findById(req.params.id)
-  .then(playlist => {
+async function show(req, res) {
+  const playlist = await Playlist.findById(req.params.id)
+    const allsongs = playlist.songs
+    console.log(allsongs)
+    let songdata = []
+    for (const song of allsongs){
+      const singlesong = await Song.findById(song)
+      songdata.push(singlesong)
+    }
+    // const songsData = allsongs.forEach(song => {
+    // })
+    // Song.find({})
       res.render('playlists/show', {
         playlist,
+        songs: songdata,
         title: `${playlist.name}`,
     })
-  })
-  .catch(err => {
-    console.log(err)
-    res.redirect("/playlists")
-  })
+  // })
 }
 
 function deletePlaylist(req, res) {

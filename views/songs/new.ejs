@@ -1,34 +1,36 @@
 <%- include('../partials/html-head') %>
 <%- include('../partials/nav') %>
 
-<h1><%= title %></h1>
-
-<form action="/songs/new" method="POST">
-  <label>Name:</label>
-  <input name="name" type="text"><br>
-  <label>Artist:</label>
-  <input name="artist" type="text"><br>
-  <label>Genre:</label>
-  <select name="genre">
-    <option disabled selected value> -- select an option -- </option>
-    <option value="Pop">Pop</option>
-    <option value="Punk">Punk</option>
-    <option value="Country">Country</option>
-    <option value="Latin">Latin</option>
-    <option value="Indie">Indie</option>
-    <option value="Rock">Rock</option>
-    <option value="Metal">Metal</option>
-    <option value="Classical">Classical</option>
-    <option value="Hip Hop">Hip Hop</option>
-    <option value="Jazz">Jazz</option>
-    <option value="90's">90's</option>
-    <option value="Romance">Romance</option>
-    <option value="Heartbreak">Heartbreak</option>
-    <option value="Uplifting">Uplifting</option>
-  </select><br>
-  <label>Chorus:</label><br>
-  <textarea name="chorus" type="text"></textarea><br>
-  <button type="submit">Add Song</button>
-</form>
-
-<%- include('../partials/footer') %>
+<main>
+  <h1><%= title %></h1>
+  
+  <form action="/songs/new" method="POST">
+    <label>Name:</label>
+    <input name="name" type="text"><br>
+    <label>Artist:</label>
+    <input name="artist" type="text"><br>
+    <label>Genre:</label>
+    <select name="genre">
+      <option disabled selected value> -- select an option -- </option>
+      <option value="Pop">Pop</option>
+      <option value="Punk">Punk</option>
+      <option value="Country">Country</option>
+      <option value="Latin">Latin</option>
+      <option value="Indie">Indie</option>
+      <option value="Rock">Rock</option>
+      <option value="Metal">Metal</option>
+      <option value="Classical">Classical</option>
+      <option value="Hip Hop">Hip Hop</option>
+      <option value="Jazz">Jazz</option>
+      <option value="90's">90's</option>
+      <option value="Romance">Romance</option>
+      <option value="Heartbreak">Heartbreak</option>
+      <option value="Uplifting">Uplifting</option>
+    </select><br>
+    <label>Chorus:</label><br>
+    <textarea name="chorus" type="text"></textarea><br>
+    <button type="submit">Add Song</button>
+  </form>
+  
+</main>
+  <%- include('../partials/footer') %>
