@@ -43,13 +43,25 @@ function create(req, res) {
   })
 }
 
-function updateSong(req, res) {
-  console.log("working")
+function addToPlaylist(req, res) {
+  console.log("playlistID#", req.body.playlistId)
+  console.log("playlistId", req.body)
+  Song.findById( req.params.id)
+  .then( song => {
+    Playlist.updateOne({_id: req.body.playlistId }, {$push: {songs: song}})
+    .then(() => {
+      res.redirect(`/playlists/${req.body.playlistId}`)
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect("/songs")
+  })
 }
 
 export {
   index,
   newSong as new,
   create,
-  updateSong
+  addToPlaylist,
 }

@@ -4,13 +4,13 @@
 <h1><%= title %></h1>
 
 <% songs.forEach(song => { %>
-  <form action="/songs" method="POST">
+  <form action="/songs/<%= song._id %>" method="POST">
     <h3><%= song.name %></h3><br>
     <h3><%= song.artist %></h3><br>
     <h3><%= song.genre %></h3><br>
     <h3>Chorus</h3><br>
     <p><%= song.chorus%></p><br>
-    <select>
+    <select name="playlistId">
       <% profile.playlists.forEach( p => { %>
       <option value="<%= p._id %>"><%= p.name %></option>
       <% }) %>

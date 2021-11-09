@@ -2,27 +2,26 @@
 <%- include('../partials/nav') %>
 
 <h1><%= title %></h1>
+<h2><%= playlist.description %></h2>
 <% if (playlist.owner.equals(user?.profile._id)) { %>
+  <form action="/playlists/<%= playlist._id %>?_method=DELETE" method="POST">
+    <button type="submit">
+      Delete Playlist
+    </button>
+  </form>
+  <form action="/playlists/<%= playlist._id %>/edit">
+    <button type="submit">
+      Edit Playlist
+    </button>
+  </form>
   <h4>Want more Songs on your Playlist? Go to Browse Music!</h4>
 <% } %>
 
-
+<%= playlist %>
 
 <form>
   <%  %>
 </form>
 
-<% if (playlist.owner.equals(user?.profile._id)) { %>
-    <form action="/playlists/<%= playlist._id %>?_method=DELETE" method="POST">
-      <button type="submit">
-        Delete Playlist
-      </button>
-    </form>
-    <form action="/playlists/<%= playlist._id %>/edit">
-      <button type="submit">
-        Edit Playlist
-      </button>
-    </form>
-<% } %>
 
 <%- include('../partials/footer') %>
