@@ -1,14 +1,15 @@
 <%- include('../partials/html-head') %>
 <%- include('../partials/nav') %>
-
-<h1><%= title %></h1>
-<form action="/playlists/<%= playlist._id %>?_method=PUT" method="POST">
-  <label >Name:</label>
-  <input name="name" type="text" value="<%= playlist.name %>"><br>
-  <label >Description:</label><br>
-  <textarea maxlength="200" name="description" type="text"><%= playlist.description %></textarea><br>
-  <button type="submit">Update Playlist</button>
-  <input hidden name="owner" value="<%= playlist.owner %>">
-</form>
+<main>
+  <h1><%= title %></h1>
+  <form action="/playlists/<%= playlist._id %>?_method=PUT" method="POST">
+    <label >Name:</label>
+    <input name="name" type="text" value="<%= playlist.name %>"><br>
+    <label >Description:</label><br>
+    <textarea maxlength="200" name="description" type="text"><%= playlist.description %></textarea><br>
+    <button type="submit">Update Playlist</button>
+    <input hidden name="owner" value="<%= playlist.owner %>">
+  </form>
+</main>
 
 <%- include('../partials/footer') %>

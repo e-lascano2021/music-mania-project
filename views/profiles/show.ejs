@@ -1,7 +1,6 @@
 <%- include('../partials/html-head') %>
 <%- include('../partials/nav') %>
 
-
 <main>
   <% if (profile.avatar) { %>
     <div>
@@ -13,30 +12,22 @@
     </div>
   <% } %>
   <h1><%= isSelf ? title : `${profile.name}'s Playlists!` %></h1>
-
-<% if (isSelf) { %>
-  <form action="/playlists/new">
-    <button type="submit">Add Playlist </button>
-  </form>
-<% } %>
-
-    <% playlists.forEach (p => { %>
-      <form>
-        <h3><%= p.name %></h3>
-        <h3><%= p.description %></h3>
-        <h3>
-          <a href="/playlists/<%= p._id %>">
-            Details
-          </a>
-        </h3>
-
-        
-      </form>
-    <% }) %>  
-
+  <% if (isSelf) { %>
+    <form action="/playlists/new">
+      <button type="submit">Add Playlist </button>
+    </form>
+  <% } %>
+  <% playlists.forEach (p => { %>
+    <form>
+      <h3><%= p.name %></h3>
+      <h3><%= p.description %></h3>
+      <h3>
+        <a href="/playlists/<%= p._id %>">
+          Details
+        </a>
+      </h3>        
+    </form>
+  <% }) %>  
 </main> 
-
-
-
 
 <%- include('../partials/footer') %>

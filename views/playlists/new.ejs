@@ -1,15 +1,16 @@
 <%- include('../partials/html-head') %>
 <%- include('../partials/nav') %>
-
-<h1><%= title %></h1>
-<form action="/playlists/new" method="POST">
-  <label >Name:</label>
-  <input name="name" type="text"><br>
-  <label>Description:</label><br>
-  <textarea maxlength="200" name="description" type="text"></textarea><br>
-  <button type="submit">Create Playlist</button>
-  <input hidden name="owner" value="<%= owner %>">
-</form>
+<main>
+  <h1><%= title %></h1>
+  <form action="/playlists/new" method="POST">
+    <label >Name:</label>
+    <input name="name" type="text"><br>
+    <label>Description:</label><br>
+    <textarea maxlength="200" name="description" type="text"></textarea><br>
+    <button type="submit">Create Playlist</button>
+    <input hidden name="owner" value="<%= owner %>">
+  </form>
+</main>
 
 <%- include('../partials/footer') %>
 

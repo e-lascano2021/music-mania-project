@@ -4,14 +4,14 @@
 <main>
   <h1><%= title %></h1>
   <% playlists.forEach(playlist => { %>
-  <form>
-    <h3>
-      <a href="/playlists/<%= playlist._id %>">
-        <%= playlist.name %>
-      </a>
-    </h3>
-    <p><%= playlist.description %></p><br>
-  </form>
-<% }) %>
+    <form>
+      <h3>
+        <a href="/playlists/<%= playlist._id %>">
+          <%= playlist.name %>
+        </a>
+      </h3>
+      <p><%= playlist.description %></p><br>
+    </form>
+  <% }) %>
 </main>
 <%- include('../partials/footer') %>

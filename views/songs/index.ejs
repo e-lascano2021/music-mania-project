@@ -1,9 +1,7 @@
 <%- include('../partials/html-head') %>
 <%- include('../partials/nav') %>
-<main>
-  
-  <h1><%= title %></h1>
-  
+<main> 
+  <h1><%= title %></h1>  
   <% songs.forEach(song => { %>
     <form action="/songs/<%= song._id %>" method="POST">
       <label name="name"><%= song.name %></label><br>
@@ -14,10 +12,10 @@
       <select name="playlistId">
         <% profile.playlists.forEach( p => { %>
           <option value="<%= p._id %>"><%= p.name %></option>
-          <% }) %>
-        </select>
-        <button>App to Playlist</button>
-      </form>
-      <% }) %>      
+        <% }) %>
+      </select>
+      <button>App to Playlist</button>
+    </form>
+  <% }) %>      
 </main>
 <%- include('../partials/footer') %>
