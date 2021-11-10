@@ -5,10 +5,10 @@
   <h1><%= title %></h1>  
   <% songs.forEach(song => { %>
     <form action="/songs/<%= song._id %>" method="POST">
-      <label name="name"><%= song.name %></label><br>
-      <label name="artist"><%= song.artist %></label><br>
-      <label name="genre"><%= song.genre %></label><br>
-      <label>Chorus</label><br>
+      <h2 name="name"><%= song.name %></h2><br>
+      <h3 name="artist"><%= song.artist %></h3><br>
+      <h2 name="genre"><%= song.genre %></h2><br>
+      <h2>Chorus:</h2><br>
       <p><%= song.chorus%></p><br>
       <select name="playlistId">
         <% profile.playlists.forEach( p => { %>

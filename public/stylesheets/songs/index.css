@@ -10,9 +10,7 @@ form {
 
 form > * {
   display: flex;
-  font-size: small;
   margin: 0;
-  padding-bottom: 1.5rem;
   overflow: hidden;
 }
 
