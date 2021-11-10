@@ -1,17 +1,15 @@
 <%- include('../partials/html-head') %>
 <link rel="stylesheet" href="/stylesheets/playlists/index.css">
 <%- include('../partials/nav') %>
-
 <main>
-<h1><%= title %></h1>
-
-<% playlists.forEach(playlist => { %>
+  <h1><%= title %></h1>
+  <% playlists.forEach(playlist => { %>
   <form>
     <h3>
       <a href="/playlists/<%= playlist._id %>">
         <%= playlist.name %>
       </a>
-    </h3><br>
+    </h3>
     <p><%= playlist.description %></p><br>
   </form>
 <% }) %>

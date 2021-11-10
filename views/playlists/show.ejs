@@ -1,34 +1,24 @@
 <%- include('../partials/html-head') %>
 <%- include('../partials/nav') %>
-
-<h1><%= title %></h1>
-<h2><%= playlist.description %></h2>
-<% if (playlist.owner.equals(user?.profile._id)) { %>
-  <form action="/playlists/<%= playlist._id %>?_method=DELETE" method="POST">
-    <button type="submit">
-      Delete Playlist
-    </button>
-  </form>
-  <form action="/playlists/<%= playlist._id %>/edit">
-    <button type="submit">
-      Edit Playlist
-    </button>
-  </form>
-  <h4>Want more Songs on your Playlist? Go to Browse Music!</h4>
-<% } %>
-
-<% songs.forEach( s => { %>
-  <form>
-    <h3><%= s.name %></h3>
-    <h3><%= s.artist %></h3>
-    <h3><%= s.genre %></h3>
-    <h3><%= s.chorus %></h3>
-  </form>
-<% }) %>
-
-<form>
-  <%  %>
-</form>
-
-
+<main>
+  <h1><%= title %></h1>
+  <h2><%= playlist.description %></h2>
+  <% if (playlist.owner.equals(user?.profile._id)) { %>
+    <form action="/playlists/<%= playlist._id %>?_method=DELETE" method="POST">
+      <button type="submit">Delete Playlist</button>
+    </form>
+    <form action="/playlists/<%= playlist._id %>/edit">
+      <button type="submit">Edit Playlist</button>
+    </form>
+    <h4>Want more Songs on your Playlist? Go to Browse Music!</h4>
+  <% } %>  
+  <% songs.forEach( s => { %>
+    <form>
+      <h3><%= s.name %></h3>
+      <h3><%= s.artist %></h3>
+      <h3><%= s.genre %></h3>
+      <h3><%= s.chorus %></h3>
+    </form>
+  <% }) %>
+</main>
 <%- include('../partials/footer') %>
