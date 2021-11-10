@@ -9,7 +9,7 @@ html {
   /* height & width will now include border & padding by default
      but can be over-ridden as needed */
   box-sizing: inherit;
-  font-family: 'Noto Serif Display', serif;
+  font-family: 'Amita', cursive;
 }
 
 /* resets font size to be 62.5% of the user preference - 
@@ -20,12 +20,12 @@ html {
 
 body {
   background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0Tm3jfO2tREZXVfXxhLG5_wTegJR-4ZEL_A&usqp=CAU");
-  font-family: 'Noto Serif Display', serif;
+  font-family: 'Amita', cursive;
   margin: 0;
   color: black;
   min-height: 100vh;
   display: grid;
-  grid-template-rows: 70px 1fr;
+  grid-template-rows: 90px 1fr;
   grid-template-areas:
     "nav"
     "main";
@@ -76,7 +76,8 @@ nav > a.active {
 }
 
 #logout-button {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.461);
   font-size: medium;
   border: 2px solid black;
+  border-radius: 15%;
 }

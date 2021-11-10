@@ -3,7 +3,7 @@ form {
   flex-direction: column;
   align-items: center;
   width: 22rem;
-  height: 10rem;
+  height: 27rem;
   border: 2px solid black;
   border-radius: 5%;
   margin-top: 0;
@@ -22,4 +22,9 @@ form > * {
   margin: 0;
   padding-bottom: 1.5rem;
   overflow: hidden;
+}
+
+#browse-playlist-image {
+  width: 20rem;
+  height: 20rem;
 }

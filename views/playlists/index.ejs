@@ -5,6 +5,9 @@
   <h1 class="animate__animated animate__zoomInDown"><%= title %></h1>
   <% playlists.forEach(playlist => { %>
     <form>
+      <image id="browse-playlist-image" 
+      src="https://i.pinimg.com/236x/d5/92/16/d59216f4545f9b175e4c61db4a9e8308--music-images-music-pictures.jpg" 
+      alt="Music tree"></image>
       <h3>
         <a href="/playlists/<%= playlist._id %>">
           <%= playlist.name %>

@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="/stylesheets/songs/index.css">
 <%- include('../partials/nav') %>
 <main> 
-  <h1><%= title %></h1>  
+  <h1 class="animate__animated animate__zoomInDown"><%= title %></h1>  
   <% songs.forEach(song => { %>
     <form action="/songs/<%= song._id %>" method="POST">
       <h2 name="name"><%= song.name %></h2><br>
