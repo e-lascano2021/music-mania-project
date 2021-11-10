@@ -1,4 +1,5 @@
 <%- include('./partials/html-head') %>
+<%%>
 <%- include('./partials/nav') %>
 
 
@@ -6,11 +7,11 @@
   <h1><%= title %></h1>
   <form>
     <h2>What is this Place?</h2>
-    <h3>Glad you asked! Music Mania is a place where you can create your own song playlist. You can browse through a selection of songs and add it to the playlist you create. Dont see the song you want? Don't worry, you can add a song onto the list and then add it to your playlist(s). </p>
+    <h3>Glad you asked! Music Mania is a place where you can create your own song playlist. You can browse through a selection of songs and add it to the playlist you create. Dont see the song you want? Don't worry, you can add a song onto the list and then add it to your playlist(s). </p><br>
     <h2>What if I suck at putting a Playlist together?</h3>
-    <h3>Music Mania lets you see other people's profiles and their playlists. Need some inspiration? Feel free to take a sneak peak and the songs they threw together.</h3>
+    <h3>Music Mania lets you see other people's profiles and their playlists. Need some inspiration? Feel free to take a sneak peak and the songs they threw together.</h3><br>
     <h2>Where Do I Start?</h2>
-    <h3>Well first things first: Sign in with a Google Account!</h3>
+    <h3>Well first things first: Sign in with a Google Account!</h3><br>
   </form>
   <% if (!user) {%>
     <a href="/auth/google" class="siwg-link">

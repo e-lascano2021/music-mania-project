@@ -19,18 +19,19 @@ html {
 }
 
 body {
-  background-color: white;
+  background-color: rgba(36, 229, 255, 0.746);
   font-family: 'Noto Serif Display', serif;
   margin: 0;
-  color: rgb(92, 0, 0);
+  color: black;
   min-height: 100vh;
   display: grid;
-  grid-template-rows: 70px 1fr;
+  grid-template-rows: 100px 1fr;
   grid-template-areas:
     "nav"
     "main";
   font-size: 1.8rem;
 }
+
 
 body > main {
   grid-area: main;
@@ -38,45 +39,50 @@ body > main {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  background-color: rgba(36, 229, 255, 0.746);
-  padding: 20px;
+  background-color: white;
+  padding: 10rem;
 }
-
-h1 {
+÷
+nav > h2 {
   font-weight: bold;
 }
 
-h2 {
-  color:black;
+form {
+  padding: 0 5rem 0 5rem;
 }
 
 body > nav {
   grid-area: nav;
-  background-color: rgb(255, 255, 255);
+  background-color: rgba(36, 229, 255, 0.746);
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px 20px 20px 30px;
+  font-size: larger;
 }
 
 nav > a {
-  margin: 20px;
+  margin: 15px;
   text-decoration: none;
   padding: 5px;
   border-radius: 5px;
-  color: #424748;
 }
 
 nav > a:visited {
-  color: Blue;
+  color: black;
 }
 
 nav > a:hover {
-  color: pink;
-  background-color: white;
+  color: rgb(255, 0, 217);
+  background-color: rgba(255, 255, 255, 0.783);
 }
 
 nav > a.active {
-  color: rgba(218, 4, 218, 0.858);
+  color: rgba(12, 20, 255, 0.858);
   font-weight: bold;
+}
+
+#logout-button {
+  background-color: white;
+  font-size: medium;
+  border: 2px solid black;
 }
