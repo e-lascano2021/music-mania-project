@@ -1,15 +1,29 @@
 a {
   text-decoration: none;
-  font-size:x-large;
+  font-size: medium;
   color: rgb(0, 30, 255);
 }
 
 form > * {
-  display:flex;
-  flex-direction:row;
-  font-size: small;
+  font-size: medium;
   margin: 0;
   overflow: hidden;
+}
+
+#profile-playlists {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 22rem;
+  height: 30rem;
+  border: 2px solid black;
+  border-radius: 5%;
+  margin-top: 0;
+}
+
+#profile-playlists-image {
+  width: 20rem;
+  height: 22rem;
 }
 
 .profile-avatar {
@@ -18,20 +32,4 @@ form > * {
   border-radius: 5%;
   padding: 5px;
   background-color: rgba(0, 191, 255, 0.516);
-}
-
-#profile-playlists {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 22rem;
-  height: 27rem;
-  border: 2px solid black;
-  border-radius: 5%;
-  margin-top: 0;
-}
-
-#profile-plsylists-image {
-  width: 20rem;
-  height: 25rem;
 }
