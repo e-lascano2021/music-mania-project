@@ -10,7 +10,11 @@
     <form action="/playlists/<%= playlist._id %>/edit">
       <button type="submit">Edit Playlist</button>
     </form>
-    <h4>Want more Songs on your Playlist? Go to Browse Music!</h4>
+    <h4>Want more Songs on your Playlist? Go to 
+      <a href="/songs">
+        Browse Music!
+      </a>
+    </h4>
   <% } %>  
   <% songs.forEach( s => { %>
     <form>

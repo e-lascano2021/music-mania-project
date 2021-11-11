@@ -9,12 +9,6 @@ form {
   margin-top: 0;
 }
 
-a {
-  text-decoration: none;
-  font-size:x-large;
-  color: rgb(0, 30, 255);
-}
-
 form > * {
   display:flex;
   flex-direction:row;
@@ -22,6 +16,12 @@ form > * {
   margin: 0;
   padding-bottom: 1.5rem;
   overflow: hidden;
+}
+
+#playlist-index-link {
+  text-decoration: none;
+  font-size:x-large;
+  color: rgb(0, 30, 255);
 }
 
 #browse-playlist-image {

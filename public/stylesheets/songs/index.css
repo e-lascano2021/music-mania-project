@@ -1,17 +1,44 @@
 form {
+  background-image: url("https://media.istockphoto.com/vectors/musical-colorful-notes-seamless-pattern-vector-id1216572478?b=1&k=20&m=1216572478&s=170667a&w=0&h=gW3PVBXBG2QHKNy8dw5kQoocXcwBGafUt4Kx8wWK3pg=");
+  background-size: cover;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 2px solid rgb(0, 0, 150);
+  border: 2px solid rgb(207, 176, 0);
   border-radius: 5%;
-  margin-top: 0;
+  height: 30rem;
+  width: 25rem;
 }
 
+h3 {
+  font-size: medium;
+  font-style: italic;
+}
+
+p {
+  font-size: small;
+  padding-left: 1.5rem;
+}
+
+fieldset {
+  border: none;
+}
 
 form > * {
-  display: flex;
   margin: 0;
   overflow: hidden;
 }
 
+#songs-list {
+  display: flex;
+  flex-direction: column-reverse;
+  max-width: 150rem;
+}
 
+#song-name {
+  text-decoration: underline;
+}
+
+#song-genre {
+  font-size: medium;
+}

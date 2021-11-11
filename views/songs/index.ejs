@@ -1,22 +1,24 @@
 <%- include('../partials/html-head') %>
 <link rel="stylesheet" href="/stylesheets/songs/index.css">
 <%- include('../partials/nav') %>
-<main> 
-  <h1 class="animate__animated animate__zoomInDown"><%= title %></h1>  
+<main id="songs-list"> 
   <% songs.forEach(song => { %>
     <form action="/songs/<%= song._id %>" method="POST">
-      <h2 name="name"><%= song.name %></h2><br>
-      <h3 name="artist"><%= song.artist %></h3><br>
-      <h2 name="genre"><%= song.genre %></h2><br>
-      <h2>Chorus:</h2><br>
-      <p><%= song.chorus%></p><br>
-      <select name="playlistId">
-        <% profile.playlists.forEach( p => { %>
-          <option value="<%= p._id %>"><%= p.name %></option>
-        <% }) %>
-      </select>
-      <button>App to Playlist</button>
-    </form><br>
-  <% }) %>      
+      <h2 id="song-name" name="name"><%= song.name %></h2>
+      <h3 name="artist"> By: <%= song.artist %></h3>
+      <h2 id="song-genre" name="genre">Genre: <%= song.genre %></h2>
+      <h2 >Chorus:</h2>
+      <p><%= song.chorus%></p>
+      <fieldset>
+        <select name="playlistId">
+          <% profile.playlists.forEach( p => { %>
+            <option value="<%= p._id %>"><%= p.name %></option>
+            <% }) %>
+          </select>
+          <button>App to Playlist</button>
+        </fieldset>
+      </form><br>
+      <% }) %>      
+      <h1 class="animate__animated animate__zoomInDown"><%= title %></h1>  
 </main>
 <%- include('../partials/footer') %>

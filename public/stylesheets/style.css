@@ -56,6 +56,7 @@ nav > h2 {
   font-weight: bold;
 }
 nav > a {
+  text-decoration: none;
   margin: 20px;
   padding: 5px;
   border-radius: 5px;
@@ -72,7 +73,7 @@ nav > a:hover {
 
 nav > a.active {
   color: rgba(12, 20, 255, 0.858);
-  font-weight: bold;
+  font-size: x-large;
 }
 
 #logout-button {

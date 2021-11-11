@@ -1,13 +1,21 @@
-a {
-  text-decoration: none;
-  font-size: medium;
-  color: rgb(0, 30, 255);
-}
-
 form > * {
   font-size: medium;
   margin: 0;
   overflow: hidden;
+}
+
+.profile-avatar {
+  height: 15rem;
+  width: 15rem;
+  border-radius: 5%;
+  padding: 5px;
+  background-color: rgba(0, 191, 255, 0.516);
+}
+
+#profile-a-tag {
+  text-decoration: none;
+  font-size: medium;
+  color: rgb(0, 30, 255);
 }
 
 #profile-playlists {
@@ -26,10 +34,6 @@ form > * {
   height: 22rem;
 }
 
-.profile-avatar {
-  height: 15rem;
-  width: 15rem;
-  border-radius: 5%;
-  padding: 5px;
-  background-color: rgba(0, 191, 255, 0.516);
+#profile-show-description {
+  font-size:x-small;
 }

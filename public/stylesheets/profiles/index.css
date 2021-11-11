@@ -1,0 +1,12 @@
+img {
+  height: 13rem;
+  width: 13rem;
+  border-radius: 15%;
+  padding: 5px;
+  background-color: rgba(0, 191, 255, 0.516);
+}
+
+p {
+  margin: 0;
+  padding-bottom: 2.5rem;
+}
