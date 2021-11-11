@@ -15,7 +15,7 @@
   <h1 class="animate__animated animate__zoomInDown"><%= isSelf ? title : `${profile.name}'s Playlists!` %></h1>
   <% if (isSelf) { %>
     <form action="/playlists/new">
-      <button type="submit">Add Playlist </button>
+      <button id="button" type="submit">Add Playlist </button>
     </form><br>
   <% } %>
   <% playlists.forEach (p => { %>

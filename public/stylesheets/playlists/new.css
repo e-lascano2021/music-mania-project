@@ -16,4 +16,7 @@ form > * {
 #create-playlist-bttn {
   width: 15rem;
   margin-bottom: 1.5rem;
+  background: transparent;
+  border: 2px solid rgb(207, 176, 0);
+  border-radius: 5%;
 }

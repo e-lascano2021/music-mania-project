@@ -3,6 +3,10 @@ section{
   flex-direction: column-reverse;
 }
 
+h1 {
+  margin: 0;
+}
+
 #playlist-show-list{
   background-image: url("https://media.istockphoto.com/vectors/musical-colorful-notes-seamless-pattern-vector-id1216572478?b=1&k=20&m=1216572478&s=170667a&w=0&h=gW3PVBXBG2QHKNy8dw5kQoocXcwBGafUt4Kx8wWK3pg=");
   background-size: cover;
@@ -37,4 +41,22 @@ section{
 #playlist-show-list > * {
   margin: 0;
   overflow: hidden;
+}
+
+#delete-playlist {
+  background: transparent;
+  border: 2px solid rgb(207, 176, 0);
+  border-radius: 5%;
+  margin-right: 1rem;
+}
+
+#edit-playlist {
+  background: transparent;
+  border: 2px solid rgb(207, 176, 0);
+  border-radius: 5%;
+}
+
+#buttons {
+  display: flex;
+  flex-direction: row;
 }

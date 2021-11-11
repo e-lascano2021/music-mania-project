@@ -3,15 +3,17 @@
 <%- include('../partials/nav') %>
 <main id="playlists-show">
   <h1 class="animate__animated animate__zoomInDown"><%= title %></h1>
-  <% if (playlist.owner.equals(user?.profile._id)) { %>
-    <form action="/playlists/<%= playlist._id %>?_method=DELETE" method="POST">
-      <button type="submit">Delete Playlist</button>
-    </form>
-    <form action="/playlists/<%= playlist._id %>/edit">
-      <button type="submit">Edit Playlist</button>
-    </form>
-    <% } %>
   <h2><%= playlist.description %></h2>
+  <% if (playlist.owner.equals(user?.profile._id)) { %>
+    <section id="buttons">
+      <form action="/playlists/<%= playlist._id %>?_method=DELETE" method="POST">
+        <button id="delete-playlist" type="submit">Delete Playlist</button>
+      </form>
+      <form action="/playlists/<%= playlist._id %>/edit">
+        <button id="edit-playlist" type="submit">Edit Playlist</button>
+      </form>      
+    </section>
+    <% } %>
   <% if (playlist.owner.equals(user?.profile._id)) { %>
     <h4>Want more Songs on your Playlist? Go to 
       <a href="/songs">

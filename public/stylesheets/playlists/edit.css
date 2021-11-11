@@ -12,3 +12,9 @@ form > * {
   margin:0;
   overflow: hidden;
 }
+
+#button {
+  background: transparent;
+  border: 2px solid rgb(207, 176, 0);
+  border-radius: 5%;
+}

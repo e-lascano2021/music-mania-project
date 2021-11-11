@@ -16,4 +16,7 @@ form > * {
 #add-song {
   width: 15rem;
   margin-top: 1rem;
+  background: transparent;
+  border: 2px solid rgb(207, 176, 0);
+  border-radius: 5%;
 }

@@ -37,3 +37,9 @@ form > * {
 #profile-show-description {
   font-size:x-small;
 }
+
+#button {
+  background: transparent;
+  border: 2px solid rgb(207, 176, 0);
+  border-radius: 5%;
+}

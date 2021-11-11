@@ -10,8 +10,8 @@ form {
 }
 
 form > * {
-  display:flex;
-  flex-direction:row;
+  display: flex;
+  flex-direction: row;
   font-size: small;
   margin: 0;
   padding-bottom: 1.5rem;
@@ -27,4 +27,8 @@ form > * {
 #browse-playlist-image {
   width: 20rem;
   height: 20rem;
+}
+
+#description {
+  padding-left: 1rem;
 }
