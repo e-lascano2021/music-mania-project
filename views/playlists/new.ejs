@@ -1,13 +1,14 @@
 <%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/playlists/new.css">
 <%- include('../partials/nav') %>
 <main>
   <h1 class="animate__animated animate__zoomInDown"><%= title %></h1>
   <form action="/playlists/new" method="POST">
     <label >Name:</label>
-    <input name="name" type="text"><br>
-    <label>Description:</label><br>
-    <textarea maxlength="200" name="description" type="text"></textarea><br>
-    <button type="submit">Create Playlist</button>
+    <input name="name" type="text" autocomplete="off">
+    <label>Description:</label>
+    <textarea maxlength="200" name="description" type="text"></textarea>
+    <button id="create-playlist-bttn" type="submit">Create Playlist</button>
     <input hidden name="owner" value="<%= owner %>">
   </form>
 </main>

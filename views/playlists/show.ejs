@@ -1,8 +1,8 @@
 <%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/playlists/show.css">
 <%- include('../partials/nav') %>
-<main>
+<main id="playlists-show">
   <h1 class="animate__animated animate__zoomInDown"><%= title %></h1>
-  <h2><%= playlist.description %></h2>
   <% if (playlist.owner.equals(user?.profile._id)) { %>
     <form action="/playlists/<%= playlist._id %>?_method=DELETE" method="POST">
       <button type="submit">Delete Playlist</button>
@@ -10,19 +10,26 @@
     <form action="/playlists/<%= playlist._id %>/edit">
       <button type="submit">Edit Playlist</button>
     </form>
+    <% } %>
+  <h2><%= playlist.description %></h2>
+  <% if (playlist.owner.equals(user?.profile._id)) { %>
     <h4>Want more Songs on your Playlist? Go to 
       <a href="/songs">
         Browse Music!
       </a>
     </h4>
-  <% } %>  
-  <% songs.forEach( s => { %>
-    <form>
-      <h3><%= s.name %></h3>
-      <h3><%= s.artist %></h3>
-      <h3><%= s.genre %></h3>
-      <h3><%= s.chorus %></h3>
-    </form>
-  <% }) %>
-</main>
-<%- include('../partials/footer') %>
+    <% } %>  
+    <section>
+
+      <% songs.forEach( s => { %>
+        <form id="playlist-show-list">
+          <h3 id="song-name" ><%= s.name %></h3>
+          <h3 id="song-artist">By: <%= s.artist %></h3>
+          <h3 id="song-genre">Genere: <%= s.genre %></h3>
+          <h3>Chorus: </h3>
+          <h3 id="song-chorus"><%= s.chorus %></h3>
+        </form><br>
+        <% }) %>
+      </main>
+    </section>
+    <%- include('../partials/footer') %>

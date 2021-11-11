@@ -4,8 +4,15 @@ const Schema = mongoose.Schema
 
 
 const playlistSchema = new Schema({
-  name: String,
-  description: String,
+  name: {
+    type: String,
+    required:true,
+  },
+
+  description: {
+    type: String,
+    required: true,
+  },
 
   songs: [{
     type: Schema.Types.ObjectId,

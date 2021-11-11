@@ -1,11 +1,12 @@
 <%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/playlists/edit.css">
 <%- include('../partials/nav') %>
 <main>
   <h1 class="animate__animated animate__zoomInDown"><%= title %></h1>
   <form action="/playlists/<%= playlist._id %>?_method=PUT" method="POST">
     <label >Name:</label>
     <input name="name" type="text" value="<%= playlist.name %>"><br>
-    <label >Description:</label><br>
+    <label >Description:</label>
     <textarea maxlength="200" name="description" type="text"><%= playlist.description %></textarea><br>
     <button type="submit">Update Playlist</button>
     <input hidden name="owner" value="<%= playlist.owner %>">

@@ -1,0 +1,40 @@
+section{
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+#playlist-show-list{
+  background-image: url("https://media.istockphoto.com/vectors/musical-colorful-notes-seamless-pattern-vector-id1216572478?b=1&k=20&m=1216572478&s=170667a&w=0&h=gW3PVBXBG2QHKNy8dw5kQoocXcwBGafUt4Kx8wWK3pg=");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid rgb(207, 176, 0);
+  border-radius: 5%;
+  height: 30rem;
+  width: 25rem;
+}
+
+#song-name {
+  text-decoration: underline;
+}
+
+#song-genre {
+  font-size: medium;
+  padding-bottom: 6px;
+}
+
+#song-artist {
+  font-style: italic;
+  font-size: medium;
+}
+
+#song-chorus {
+  font-size: medium;
+  padding-left: 1.2rem;
+}
+
+#playlist-show-list > * {
+  margin: 0;
+  overflow: hidden;
+}

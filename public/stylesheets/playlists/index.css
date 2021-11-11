@@ -4,7 +4,7 @@ form {
   align-items: center;
   width: 22rem;
   height: 27rem;
-  border: 2px solid black;
+  border: 2px solid rgb(207, 176, 0);
   border-radius: 5%;
   margin-top: 0;
 }

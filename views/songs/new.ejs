@@ -1,13 +1,14 @@
 <%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/songs/new.css">
 <%- include('../partials/nav') %>
 
 <main>
   <h1 class="animate__animated animate__zoomInDown"><%= title %></h1>
   <form action="/songs/new" method="POST">
     <label>Name:</label>
-    <input name="name" type="text"><br>
+    <input name="name" type="text" autocomplete="off">
     <label>Artist:</label>
-    <input name="artist" type="text"><br>
+    <input name="artist" type="text" autocomplete="off">
     <label>Genre:</label>
     <select name="genre">
       <option disabled selected value> -- select an option -- </option>
@@ -25,10 +26,10 @@
       <option value="Romance">Romance</option>
       <option value="Heartbreak">Heartbreak</option>
       <option value="Uplifting">Uplifting</option>
-    </select><br>
-    <label>Chorus:</label><br>
-    <textarea name="chorus" type="text"></textarea><br>
-    <button type="submit">Add Song</button>
+    </select>
+    <label>Chorus:</label>
+    <textarea name="chorus" type="text"></textarea>
+    <button id="add-song" type="submit">Add Song</button>
   </form>
 </main>
   <%- include('../partials/footer') %>

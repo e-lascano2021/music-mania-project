@@ -32,7 +32,6 @@ form > * {
 #songs-list {
   display: flex;
   flex-direction: column-reverse;
-  max-width: 150rem;
 }
 
 #song-name {
